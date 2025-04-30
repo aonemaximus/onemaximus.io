@@ -1,11 +1,4 @@
-// Smooth Scroll Functionality
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-});
+// GSAP Animations for smooth transitions
+gsap.from(".hero h1", { opacity: 0, y: -100, duration: 1 });
+gsap.from(".hero p", { opacity: 0, y: 100, duration: 1, delay: 0.5 });
+gsap.from(".navbar", { opacity: 0, y: -100, duration: 1, delay: 1 });
