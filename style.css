@@ -104,6 +104,10 @@ ul {
   line-height: 1.8;
 }
 
+.typing {
+  color: #ffdd57;  /* Change the color to make it more visible */
+}
+
 .card {
   background: linear-gradient(145deg, #f8f5ff, #ffffff);
   padding: 1.5rem;
