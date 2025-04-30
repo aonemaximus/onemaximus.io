@@ -154,31 +154,38 @@ footer {
   background: var(--accent-dark);
 }
 
-/* Adjusting the text color of the Projects section in dark mode */
-body.dark-mode #projects {
-  color: var(--text-dark); /* Ensure light text color in dark mode */
+/* Shared dark mode styles for both Projects and Hobbies */
+body.dark-mode #projects,
+body.dark-mode #hobbies {
+  color: var(--text-dark);
 }
 
-body.dark-mode #projects h2 {
-  color: var(--accent); /* Change heading color for better contrast */
+body.dark-mode #projects h2,
+body.dark-mode #hobbies h2 {
+  color: var(--accent);
 }
 
-body.dark-mode #projects .card {
-  background: var(--card-dark); /* Dark background for card */
-  color: var(--text-dark); /* Light text inside cards */
+body.dark-mode #projects .card,
+body.dark-mode #hobbies .card {
+  background: var(--card-dark);
+  color: var(--text-dark);
 }
 
-body.dark-mode #projects .card h3 {
-  color: var(--white); /* Light color for card titles */
+body.dark-mode #projects .card h3,
+body.dark-mode #hobbies .card h3 {
+  color: var(--white);
 }
 
-body.dark-mode #projects .card p, 
-body.dark-mode #projects .card a {
-  color: var(--text-dark); /* Ensure visibility of text and links in cards */
+body.dark-mode #projects .card p,
+body.dark-mode #projects .card a,
+body.dark-mode #hobbies .card p,
+body.dark-mode #hobbies .card a {
+  color: var(--text-dark);
 }
 
-body.dark-mode #projects .card a:hover {
-  color: var(--accent-dark); /* Ensure link hover effect is clear */
+body.dark-mode #projects .card a:hover,
+body.dark-mode #hobbies .card a:hover {
+  color: var(--accent-dark);
 }
 
 .trek-showcase {
