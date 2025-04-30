@@ -1,124 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Portfolio</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animation Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-black text-gray-800 dark:text-white">
 
-  <!-- Header -->
-  <header class="p-10 text-center bg-white dark:bg-gray-800 shadow-md" data-aos="fade-down">
-    <h1 class="text-5xl font-bold text-blue-600 dark:text-blue-400">Your Name</h1>
-    <p class="text-xl mt-2 animate-pulse">Interactive Portfolio Website</p>
-    <button id="toggle-darkmode" class="mt-4 p-2 bg-blue-500 text-white rounded-lg">
-      Toggle Dark Mode
-    </button>
+<body>
+
+  <!-- Header Section with Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1>Your Name</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="p-10" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-    <p class="text-lg">
-      Passionate developer with a love for building interactive and elegant user experiences. Skilled in modern web technologies and constantly exploring new trends.
-    </p>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="p-10 bg-white dark:bg-gray-800" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">Education</h2>
-    <ul class="space-y-4">
-      <li>
-        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-md shadow-md">
-          <strong>B.Sc. in Computer Science</strong><br />
-          XYZ University, 2018 - 2022
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Work Experience Section -->
-  <section id="experience" class="p-10" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">Work Experience</h2>
-    <ul class="space-y-4">
-      <li>
-        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-md shadow-md">
-          <strong>Frontend Developer</strong> @ ABC Corp (2022 - Present)
-          <p>
-            Built scalable web apps using React, Tailwind CSS, and integrated REST APIs with animations for smooth UX.
-          </p>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="p-10 bg-white dark:bg-gray-800" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">Skills</h2>
-    <div class="flex flex-wrap gap-4">
-      <span class="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full text-sm font-medium shadow">React</span>
-      <span class="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full text-sm font-medium shadow">Tailwind CSS</span>
-      <span class="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full text-sm font-medium shadow">JavaScript</span>
-      <span class="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full text-sm font-medium shadow">Node.js</span>
-      <span class="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full text-sm font-medium shadow">Git</span>
-      <span class="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full text-sm font-medium shadow">Figma</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Passionate Developer | Creative Technologist</p>
+      <a href="#about" class="btn-primary">Explore More</a>
     </div>
   </section>
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="p-10" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">Certifications</h2>
-    <ul class="space-y-4">
-      <li>
-        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-md shadow-md">
-          <strong>React Developer Certification</strong><br />
-          Issued by XYZ Academy, 2023
-        </div>
-      </li>
-    </ul>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate developer with a love for building web applications. I love solving problems with modern tech.</p>
+    </div>
   </section>
 
-  <!-- Hobbies Section -->
-  <section id="hobbies" class="p-10 bg-white dark:bg-gray-800" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">Hobbies</h2>
-    <ul class="flex gap-4">
-      <li class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-xl text-lg">🎵 Music</li>
-      <li class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-xl text-lg">📚 Reading</li>
-      <li class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-xl text-lg">🎮 Gaming</li>
-      <li class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-xl text-lg">✈️ Traveling</li>
-    </ul>
+  <!-- Education Section -->
+  <section id="education" class="section section-light">
+    <div class="container">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <h3>B.Sc. in Computer Science</h3>
+          <p>XYZ University, 2018 - 2022</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <h3>Frontend Developer @ ABC Corp</h3>
+          <p>Building modern web applications with React, Tailwind CSS, and more.</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="p-10" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-    <form class="space-y-4 max-w-md mx-auto">
-      <input type="text" placeholder="Your Name" class="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-900 rounded">
-      <input type="email" placeholder="Your Email" class="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-900 rounded">
-      <textarea placeholder="Your Message" class="w-full p-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-900 rounded" rows="4"></textarea>
-      <button type="submit" class="p-2 bg-blue-500 text-white rounded-lg">Send Message</button>
-    </form>
+  <section id="contact" class="section section-light">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center p-6 bg-gray-100 dark:bg-gray-900 text-sm text-gray-600 dark:text-gray-300">
-    © 2025 Your Name. All rights reserved.
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
   </footer>
 
-  <!-- Dark Mode Toggle Script -->
-  <script>
-    const toggleButton = document.getElementById('toggle-darkmode');
-    toggleButton.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
-
-    // AOS initialization
-    AOS.init();
-  </script>
+  <!-- JavaScript File -->
+  <script src="scripts.js"></script>
 </body>
+
 </html>
