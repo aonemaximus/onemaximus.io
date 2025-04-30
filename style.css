@@ -158,3 +158,39 @@ footer {
 #darkToggle:hover {
   background: var(--accent-dark);
 }
+
+/* Certifications Section */
+#certifications ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+#certifications li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Hobbies Section */
+#hobbies p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Contact Section */
+#contact .contact-info a {
+  display: inline-block;
+  margin: 15px 10px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#contact .contact-info a:hover {
+  background: var(--accent-dark);
+  color: white;
+}
+
