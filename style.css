@@ -275,7 +275,7 @@ body.dark-mode .trek-showcase p {
   display: flex;
   position: relative;
   margin: 2rem 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 #education .timeline-item.left {
@@ -340,10 +340,18 @@ body.dark-mode #education .timeline-content h3 {
   color: var(--text-dark);
 }
 
-/* Hover effect on timeline items */
-#education .timeline-item:hover {
+/* Hover Effect on Individual Timeline Item */
+#education .timeline-item:hover .timeline-content {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#education .timeline-item.left:hover .timeline-content {
+  transform: translateX(-10px); /* Left card will pop to the left */
+}
+
+#education .timeline-item.right:hover .timeline-content {
+  transform: translateX(10px); /* Right card will pop to the right */
 }
 
 /* Adjusting for small screens */
