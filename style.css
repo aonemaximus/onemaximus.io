@@ -354,6 +354,16 @@ body.dark-mode #education .timeline-content h3 {
   transform: translateX(10px); /* Right card will pop to the right */
 }
 
+/* Timeline content paragraphs */
+#education .timeline-item .timeline-content p {
+  color: var(--text);  /* Default text color for light mode */
+}
+
+/* Dark mode specific styling */
+body.dark-mode #education .timeline-item .timeline-content p {
+  color: var(--text-dark);  /* Text color for dark mode */
+}
+
 /* Adjusting for small screens */
 @media (max-width: 768px) {
   #education .timeline {
