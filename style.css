@@ -1,5 +1,4 @@
 :root {
-  /* Light Mode Colors */
   --bg: #f3f0ff;
   --text: #1f1b2e;
   --accent: #7c3aed;
@@ -7,7 +6,7 @@
   --white: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08);
 
-  /* Dark Mode Colors */
+  /* Dark mode colors */
   --bg-dark: #1a1625;
   --text-dark: #f5f5f5;
   --card-dark: #2d2940;
@@ -31,7 +30,6 @@ section {
   padding: 4rem 2rem;
 }
 
-/* HERO */
 #hero {
   background: linear-gradient(to right, #6d28d9, #9333ea);
   color: white;
@@ -53,7 +51,7 @@ section {
 }
 
 .highlight {
-  color: #ffdd57; /* Highlighted text color */
+  color: #ffdd57;
 }
 
 .contact-links a {
@@ -74,7 +72,6 @@ section {
   border: 2px solid white;
 }
 
-/* MODULES */
 .module {
   background: var(--white);
   margin: 2rem auto;
@@ -91,7 +88,6 @@ section {
 
 body.dark-mode .module {
   background: var(--card-dark);
-  color: var(--text-dark); /* Light text for dark mode */
 }
 
 h2 {
@@ -108,7 +104,6 @@ ul {
   line-height: 1.8;
 }
 
-/* CARD */
 .card {
   background: linear-gradient(145deg, #f8f5ff, #ffffff);
   padding: 1.5rem;
@@ -129,7 +124,6 @@ ul {
   font-weight: 500;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem;
@@ -137,7 +131,6 @@ footer {
   color: white;
 }
 
-/* DARK MODE TOGGLE BUTTON */
 #darkToggle {
   position: fixed;
   top: 1rem;
@@ -157,26 +150,29 @@ footer {
   background: var(--accent-dark);
 }
 
-/* TYPING EFFECT TEXT */
-.typing {
-  color: #ffdd57; /* Highlighted typing text color */
+/* Adjusting the text color of the Projects section in dark mode */
+body.dark-mode #projects {
+  color: var(--text-dark); /* Ensure light text color in dark mode */
 }
 
-/* Apply custom text color for dark mode */
-body.dark-mode .typing {
-  color: #ffdd57; /* Adjust color for dark mode typing effect */
+body.dark-mode #projects h2 {
+  color: var(--accent); /* Change heading color for better contrast */
 }
 
-body.dark-mode .hero-content h1, 
-body.dark-mode .hero-content h2 {
-  color: var(--white);  /* Ensure light color for dark mode */
+body.dark-mode #projects .card {
+  background: var(--card-dark); /* Dark background for card */
+  color: var(--text-dark); /* Light text inside cards */
 }
 
-body.dark-mode .contact-links a {
-  color: var(--accent-dark);  /* Adjust link color for dark mode */
+body.dark-mode #projects .card h3 {
+  color: var(--white); /* Light color for card titles */
 }
 
-body.dark-mode footer {
-  background: var(--bg-dark);
-  color: var(--text-dark);
+body.dark-mode #projects .card p, 
+body.dark-mode #projects .card a {
+  color: var(--text-dark); /* Ensure visibility of text and links in cards */
+}
+
+body.dark-mode #projects .card a:hover {
+  color: var(--accent-dark); /* Ensure link hover effect is clear */
 }
