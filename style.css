@@ -86,6 +86,10 @@ section {
   transform: translateY(-5px);
 }
 
+.typing {
+  color: #ffdd57;  /* Change the color to make it more visible */
+}
+
 body.dark-mode .module {
   background: var(--card-dark);
 }
