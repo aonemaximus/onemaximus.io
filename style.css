@@ -275,6 +275,7 @@ body.dark-mode .trek-showcase p {
   display: flex;
   position: relative;
   margin: 2rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #education .timeline-item.left {
@@ -294,6 +295,7 @@ body.dark-mode .trek-showcase p {
   width: 45%;
   position: relative;
   z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #education .timeline-content h3 {
@@ -336,6 +338,12 @@ body.dark-mode #education .timeline-content h3 {
 
 #education .timeline-item .timeline-content p {
   color: var(--text-dark);
+}
+
+/* Hover effect on timeline items */
+#education .timeline-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Adjusting for small screens */
