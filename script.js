@@ -1,178 +1,28 @@
-:root {
-  --bg: #f3f0ff;
-  --text: #1f1b2e;
-  --accent: #7c3aed;
-  --accent-dark: #6d28d9;
-  --white: #ffffff;
-  --shadow: rgba(0, 0, 0, 0.08);
-
-  /* Dark mode colors */
-  --bg-dark: #1a1625;
-  --text-dark: #f5f5f5;
-  --card-dark: #2d2940;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  scroll-behavior: smooth;
-  transition: background 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background: var(--bg-dark);
-  color: var(--text-dark);
-}
-
-section {
-  padding: 4rem 2rem;
-}
-
-#hero {
-  background: linear-gradient(to right, #6d28d9, #9333ea);
-  color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  height: 2rem;
-}
-
-.highlight {
-  color: #ffdd57;
-}
-
-.contact-links a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background: var(--white);
-  color: var(--accent);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.contact-links a:hover {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.module {
-  background: var(--white);
-  margin: 2rem auto;
-  max-width: 900px;
-  border-radius: 12px;
-  padding: 3rem;
-  box-shadow: 0 12px 24px var(--shadow);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.module:hover {
-  transform: translateY(-5px);
-}
-
-body.dark-mode .module {
-  background: var(--card-dark);
-}
-
-h2 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
-  padding-bottom: 0.3rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-  line-height: 1.8;
-}
-
-.card {
-  background: linear-gradient(145deg, #f8f5ff, #ffffff);
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin: 1.5rem 0;
-  box-shadow: 0 6px 12px var(--shadow);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-
-.card a {
-  text-decoration: none;
-  color: var(--accent-dark);
-  font-weight: 500;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #1f1b2e;
-  color: white;
-}
-
-#darkToggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  z-index: 999;
-  transition: background 0.3s;
-}
-
-#darkToggle:hover {
-  background: var(--accent-dark);
-}
-
-/* Adjusting the text color of the Projects section in dark mode */
-body.dark-mode #projects {
-  color: var(--text-dark); /* Ensure light text color in dark mode */
-}
-
-body.dark-mode #projects h2 {
-  color: var(--accent); /* Change heading color for better contrast */
-}
-
-body.dark-mode #projects .card {
-  background: var(--card-dark); /* Dark background for card */
-  color: var(--text-dark); /* Light text inside cards */
-}
-
-body.dark-mode #projects .card h3 {
-  color: var(--white); /* Light color for card titles */
-}
-
-body.dark-mode #projects .card p, 
-body.dark-mode #projects .card a {
-  color: var(--text-dark); /* Ensure visibility of text and links in cards */
-}
-
-body.dark-mode #projects .card a:hover {
-  color: var(--accent-dark); /* Ensure link hover effect is clear */
-}
+// Typed.js effect
+ document.addEventListener("DOMContentLoaded", () => {
+   new Typed(".typing", {
+     strings: ["Web Developer", "UI/UX Designer", "Open Source Contributor"],
+     typeSpeed: 80,
+     backSpeed: 40,
+     loop: true
+   });
+ 
+   // Dark mode toggle
+   const toggle = document.getElementById("darkToggle");
+ 
+   // Check if dark mode is enabled from localStorage
+   if (localStorage.getItem("dark-mode") === "enabled") {
+     document.body.classList.add("dark-mode");
+   }
+ 
+   toggle.addEventListener("click", () => {
+     document.body.classList.toggle("dark-mode");
+ 
+     // Store dark mode state in localStorage
+     if (document.body.classList.contains("dark-mode")) {
+       localStorage.setItem("dark-mode", "enabled");
+     } else {
+       localStorage.setItem("dark-mode", "disabled");
+     }
+   });
+ });
