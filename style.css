@@ -180,3 +180,40 @@ body.dark-mode #projects .card a {
 body.dark-mode #projects .card a:hover {
   color: var(--accent-dark); /* Ensure link hover effect is clear */
 }
+
+.trek-showcase {
+  margin-top: 2rem;
+}
+
+.trek-showcase h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.trek-showcase p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.trek-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.trek-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.trek-gallery img:hover {
+  transform: scale(1.03);
+}
+
+body.dark-mode .trek-showcase p {
+  color: var(--text-dark);
+}
