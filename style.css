@@ -154,37 +154,63 @@ footer {
   background: var(--accent-dark);
 }
 
-/* Shared dark mode styles for both Projects and Hobbies */
+/* Shared dark mode styles for multiple sections */
 body.dark-mode #projects,
-body.dark-mode #hobbies {
+body.dark-mode #hobbies,
+body.dark-mode #experience,
+body.dark-mode #education,
+body.dark-mode #certifications {
   color: var(--text-dark);
 }
 
+/* Headings for each section */
 body.dark-mode #projects h2,
-body.dark-mode #hobbies h2 {
+body.dark-mode #hobbies h2,
+body.dark-mode #experience h2,
+body.dark-mode #education h2,
+body.dark-mode #certifications h2 {
   color: var(--accent);
 }
 
+/* Cards inside these sections */
 body.dark-mode #projects .card,
-body.dark-mode #hobbies .card {
+body.dark-mode #hobbies .card,
+body.dark-mode #experience .card,
+body.dark-mode #education .card,
+body.dark-mode #certifications .card {
   background: var(--card-dark);
   color: var(--text-dark);
 }
 
+/* Titles inside the cards */
 body.dark-mode #projects .card h3,
-body.dark-mode #hobbies .card h3 {
+body.dark-mode #hobbies .card h3,
+body.dark-mode #experience .card h3,
+body.dark-mode #education .card h3,
+body.dark-mode #certifications .card h3 {
   color: var(--white);
 }
 
+/* Paragraphs and links inside the cards */
 body.dark-mode #projects .card p,
 body.dark-mode #projects .card a,
 body.dark-mode #hobbies .card p,
-body.dark-mode #hobbies .card a {
+body.dark-mode #hobbies .card a,
+body.dark-mode #experience .card p,
+body.dark-mode #education .card p,
+body.dark-mode #certifications .card p,
+body.dark-mode #experience .card a,
+body.dark-mode #education .card a,
+body.dark-mode #certifications .card a {
   color: var(--text-dark);
 }
 
+/* Hover effect for links */
 body.dark-mode #projects .card a:hover,
-body.dark-mode #hobbies .card a:hover {
+body.dark-mode #hobbies .card a:hover,
+body.dark-mode #experience .card a:hover,
+body.dark-mode #education .card a:hover,
+body.dark-mode #certifications .card a:hover {
   color: var(--accent-dark);
 }
 
