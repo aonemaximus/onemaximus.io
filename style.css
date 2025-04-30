@@ -339,19 +339,23 @@ body.dark-mode #education .timeline-content h3 {
   margin: 0 auto;
 }
 
-/* Adding a circle to represent each event in the timeline */
-#education .timeline-item:before {
+/* Timeline container */
+#education .timeline {
+  position: relative;
+  padding: 2rem 0;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#education .timeline:before {
   content: '';
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
-  width: 16px;
-  height: 16px;
-  background-color: var(--accent);
-  border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  width: 2px;
+  height: 100%;
+  background: var(--accent);
+  z-index: 1;
 }
 
 /* Timeline items (left and right) */
@@ -359,50 +363,46 @@ body.dark-mode #education .timeline-content h3 {
   display: flex;
   position: relative;
   margin: 2rem 0;
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
-#education .timeline-item.left {
-  flex-direction: row-reverse;
-}
-
-#education .timeline-item.right {
-  flex-direction: row;
-}
-
-/* Timeline content (cards) */
+/* Timeline content */
 #education .timeline-content {
   padding: 1.5rem;
   background: var(--white);
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px var(--shadow);
   width: 45%;
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
-/* Hover effect for timeline content */
-#education .timeline-item:hover .timeline-content {
-  transform: translateY(-5px); /* Lift the card slightly */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Increase shadow on hover */
-}
-
-/* Styling for the card titles */
 #education .timeline-content h3 {
   font-size: 1.5rem;
   color: var(--accent);
   margin: 0;
-  font-weight: bold;
 }
 
-/* Styling for the card text */
 #education .timeline-content p {
   margin: 0.5rem 0;
   font-size: 1rem;
 }
 
-/* Alternate left and right side positioning */
+/* Circular Indicators */
+#education .timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+/* Left-side and Right-side items positioning */
 #education .timeline-item.left .timeline-content {
   margin-right: 50px;
 }
@@ -411,20 +411,34 @@ body.dark-mode #education .timeline-content h3 {
   margin-left: 50px;
 }
 
-/* Dark Mode */
-body.dark-mode #education .timeline-item:before {
-  background-color: var(--accent-dark);
+/* Hover Effect on Timeline Items */
+#education .timeline-item:hover .timeline-content {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#education .timeline-item.left:hover .timeline-content {
+  transform: translateX(-10px); /* Left card will pop to the left */
+}
+
+#education .timeline-item.right:hover .timeline-content {
+  transform: translateX(10px); /* Right card will pop to the right */
+}
+
+/* Dark Mode Styling */
+body.dark-mode #education .timeline:before {
+  background: var(--accent-dark);
 }
 
 body.dark-mode #education .timeline-item .timeline-content {
   background: var(--card-dark);
 }
 
-body.dark-mode #education .timeline-content h3 {
-  color: var(--white);
+body.dark-mode #education .timeline-item .timeline-content p {
+  color: var(--text-dark);
 }
 
-/* Responsive Design */
+/* Adjusting for small screens */
 @media (max-width: 768px) {
   #education .timeline {
     margin-left: 0;
