@@ -1,92 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <h1>Hi, I'm [Your Name]</h1>
+      <p>I'm a Web Developer</p>
+      <a href="#about" class="btn">Learn More</a>
+    </section>
 
-<body>
-
-  <!-- Header Section with Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <h1>Your Name</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="content">
-      <h2>Welcome to My Portfolio</h2>
-      <p>Passionate Developer | Creative Technologist</p>
-      <a href="#about" class="btn-primary">Explore More</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
+    <!-- About Section -->
+    <section id="about" class="section">
       <h2>About Me</h2>
-      <p>I am a passionate developer with a love for building web applications. I love solving problems with modern tech.</p>
-    </div>
-  </section>
+      <p>I build things for the web with a focus on user experience.</p>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education" class="section section-light">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <h3>B.Sc. in Computer Science</h3>
-          <p>XYZ University, 2018 - 2022</p>
-        </li>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2>My Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Work Experience</h2>
-      <ul>
-        <li>
-          <h3>Frontend Developer @ ABC Corp</h3>
-          <p>Building modern web applications with React, Tailwind CSS, and more.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">Project 1</div>
+        <div class="project-card">Project 2</div>
+        <div class="project-card">Project 3</div>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section section-light">
-    <div class="container">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
       <h2>Contact Me</h2>
       <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
         <textarea placeholder="Your Message"></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
+        <button type="submit">Send Message</button>
       </form>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+    </footer>
 
-  <!-- JavaScript File -->
-  <script src="scripts.js"></script>
-</body>
-
+    <script src="scripts.js"></script>
+  </body>
 </html>
